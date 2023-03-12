@@ -1,4 +1,4 @@
-package com.caioazs.semina.models;
+package com.caioazs.omicron.models;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

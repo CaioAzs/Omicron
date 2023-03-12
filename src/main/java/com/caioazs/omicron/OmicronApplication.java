@@ -1,13 +1,13 @@
-package com.caioazs.semina;
+package com.caioazs.omicron;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SeminaApplication {
+public class OmicronApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SeminaApplication.class, args);
+		SpringApplication.run(OmicronApplication.class, args);
 	}
 
 }

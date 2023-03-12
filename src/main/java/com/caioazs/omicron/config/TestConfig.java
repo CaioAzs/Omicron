@@ -1,11 +1,11 @@
-package com.caioazs.semina.config;
+package com.caioazs.omicron.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.caioazs.semina.models.Client;
-import com.caioazs.semina.repositories.ClientRepository;
+import com.caioazs.omicron.models.Client;
+import com.caioazs.omicron.repositories.ClientRepository;
 
 @Configuration
 public class TestConfig implements CommandLineRunner {

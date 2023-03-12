@@ -1,4 +1,4 @@
-package com.caioazs.semina.controllers.exceptions;
+package com.caioazs.omicron.controllers.exceptions;
 
 import java.util.Arrays;
 import java.util.List;

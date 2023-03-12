@@ -1,4 +1,4 @@
-package com.caioazs.semina.controllers;
+package com.caioazs.omicron.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.caioazs.semina.models.Client;
-import com.caioazs.semina.repositories.ClientRepository;
+import com.caioazs.omicron.models.Client;
+import com.caioazs.omicron.repositories.ClientRepository;
 
 import jakarta.validation.Valid;
 

@@ -1,4 +1,4 @@
-package com.caioazs.semina.models;
+package com.caioazs.omicron.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.caioazs.semina.config;
+package com.caioazs.omicron.config;
 
 import java.util.Locale;
 
