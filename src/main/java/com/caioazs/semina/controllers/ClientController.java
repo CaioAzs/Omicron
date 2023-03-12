@@ -16,6 +16,8 @@ import org.springframework.web.server.ResponseStatusException;
 import com.caioazs.semina.models.Client;
 import com.caioazs.semina.repositories.ClientRepository;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/clients")
 public class ClientController {
@@ -25,13 +27,13 @@ public class ClientController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Client saveClient(@RequestBody Client client) throws Exception {
+    public Client saveClient(@RequestBody @Valid Client client) throws Exception {
         return clientRepository.save(client);
     }
 
     @GetMapping("/{id}")
     public Client findById(@PathVariable Long id) throws Exception {
-        return clientRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        return clientRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Client not found"));
     }
 
     @DeleteMapping("/{id}")
@@ -43,7 +45,7 @@ public class ClientController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void update(@PathVariable Long id, @RequestBody Client client_request) throws Exception{
+    public void update(@PathVariable Long id, @RequestBody @Valid Client client_request) throws Exception{
         clientRepository
                 .findById(id)
                 .map(client ->{
