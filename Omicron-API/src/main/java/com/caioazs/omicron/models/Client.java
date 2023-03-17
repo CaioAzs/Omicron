@@ -39,7 +39,7 @@ public class Client {
 
     @Column(nullable = false)
     @NotNull(message = "{cpf.field.required}")
-    @CPF(message = "{CPF.field.invalid}")
+    @CPF(message = "{cpf.field.invalid}")
     private String cpf;
 
 
