@@ -8,11 +8,12 @@ import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
-    ClientsFormComponent
+    ClientsFormComponent,
   ],
   imports: [
     CommonModule,
-    ClientsRoutingModule
+    ClientsRoutingModule,
+    FormsModule,
   ],
   exports: [
     ClientsFormComponent

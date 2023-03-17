@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component';
 import { ClientsModule } from './clients/clients.module';
+import { ClientsService } from './clients.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { ClientsModule } from './clients/clients.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     TemplateModule,
     ClientsModule,
-
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ClientsService
+  ],
+  bootstrap: [AppComponent
+  ]
 })
 export class AppModule { }

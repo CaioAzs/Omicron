@@ -3,35 +3,45 @@
     <li class="breadcrumb-item active">Form</li>
 </ol>
     <div class="container">
-        <form>
+        <form #clientForm="ngForm" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label></label>
-                        <input type="text" class="form-control" id="name" placeholder="ID" disabled="true">
+                        <input type="text" class="form-control" placeholder="ID" name="id" [ngModel]="client.id" disabled="true">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label></label>
-                        <input type="text" class="form-control" id="name" placeholder="Date" disabled="true">
+                        <input type="text" class="form-control" placeholder="Date" name="dateCreated" [ngModel]="client.dateCreated" disabled="true">
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6"> 
                     <div class="form-group">
                         <label>Name *</label>
-                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        <input type="text" class="form-control" placeholder="Name" [(ngModel)]="client.name" name="name">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>CPF *</label>
-                        <input type="text" class="form-control" id="name" placeholder="CPF">
+                        <input type="text" class="form-control" placeholder="CPF" name="cpf" [(ngModel)]="client.cpf">
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Phone *</label>
+                    <input type="text" class="form-control" placeholder="Phone" name="phone" [(ngModel)]="client.phone">
+                </div>
+                <div class="col-md-6">
+                    <label>Username  *</label>
+                    <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="client.username">
+                </div>
+            </div><br>
             <div class="row">
                 <div class="col-md-2">
                     <button type="submit" class="btn btn-success">
