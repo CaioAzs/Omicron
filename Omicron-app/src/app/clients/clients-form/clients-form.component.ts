@@ -9,9 +9,12 @@ import { ClientsService } from "../../clients.service"
 })
 export class ClientsFormComponent implements OnInit {
 
-  client: Client;
+  client: Client
+  success: boolean = false
+  errors : String[] | undefined
+
   constructor(private service: ClientsService) {
-    this.client = new Client();
+    this.client = new Client()
   }
   ngOnInit(): void {
   }
@@ -20,7 +23,14 @@ export class ClientsFormComponent implements OnInit {
     this.service
       .postClient(this.client)
       .subscribe(response => {
-        console.log(response);
-      })
+        this.success = true
+        this.errors = []
+        this.client = response
+      }, errorResponse => {
+        console.log(errorResponse.error);
+        this.success = false
+        this.errors = errorResponse.error.errors;
+      }
+      )
   }
 }
