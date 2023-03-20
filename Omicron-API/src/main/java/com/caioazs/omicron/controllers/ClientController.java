@@ -1,5 +1,7 @@
 package com.caioazs.omicron.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -31,6 +33,11 @@ public class ClientController {
     @ResponseStatus(HttpStatus.CREATED)
     public Client saveClient(@RequestBody @Valid Client client) throws Exception {
         return clientRepository.save(client);
+    }
+    
+    @GetMapping
+    public List<Client> findAll() throws Exception {
+        return clientRepository.findAll();
     }
 
     @GetMapping("/{id}")
